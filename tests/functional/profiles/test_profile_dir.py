@@ -106,7 +106,7 @@ class TestProfiles:
         if profiles_dir_cli_arg:
             command.extend(["--profiles-dir", str(profiles_dir_cli_arg)])
 
-        # get the output of `dbt debug` regarless of the exit code
+        # get the output of `dbt debug` regardless of the exit code
         return run_dbt_and_capture_stdout(command, expect_pass=None)
 
     @pytest.mark.parametrize(
