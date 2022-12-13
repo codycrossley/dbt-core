@@ -212,7 +212,7 @@ profile = click.option(
 profiles_dir = click.option(
     "--profiles-dir",
     envvar="DBT_PROFILES_DIR",
-    help="Which directory to look in for the profiles.yml file. If not set, dbt will look in the current working directory first, then HOME/.dbt/",
+    help="Which directory to look in for the profiles.yml file. If not set, dbt will look in the directory defined by the DBT_PROFILES_DIR environment variable, then current working directory, then HOME/.dbt/",
     default=default_profiles_dir(),
     type=click.Path(exists=True),
 )
